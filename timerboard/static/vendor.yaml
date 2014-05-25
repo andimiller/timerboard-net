@@ -1,0 +1,18 @@
+js-vendor:
+        filters: rjsmin
+        output: vendor.js
+        contents:
+                - bower_components/jquery/dist/jquery.js
+                - bower_components/jquery-ui/ui/jquery-ui.js
+                - bower_components/bootstrap/dist/js/bootstrap.js
+                - bower_components/jqueryui-timepicker-addon/dist/jquery-ui-timepicker-addon.js
+                - bower_components/mustache/mustache.js
+                - bower_components/tinysort/dist/jquery.tinysort.js
+                - bower_components/moment/moment.js
+
+css-vendor:
+        filters: sass,cssutils
+        output: vendor.css
+        contents:
+                - bower_components/jquery-ui/ui/jquery-ui.css
+                - bower_components/font-awesome/css/font-awesome.css

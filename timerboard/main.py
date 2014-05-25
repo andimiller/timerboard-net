@@ -7,7 +7,6 @@ assets.init_app(app)
 
 @app.route("/")
 def index():
-	print "hi"
 	return render_template("index.html")
 
 if __name__ == "__main__":
