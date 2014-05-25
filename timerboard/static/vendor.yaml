@@ -11,8 +11,8 @@ js-vendor:
                 - bower_components/moment/moment.js
 
 css-vendor:
-        filters: sass,cssutils
+        filters: cssutils
         output: vendor.css
         contents:
-                - bower_components/jquery-ui/ui/jquery-ui.css
+                - bower_components/jquery-ui/themes/base/jquery-ui.css
                 - bower_components/font-awesome/css/font-awesome.css

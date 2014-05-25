@@ -1,0 +1,3 @@
+[submodule "timerboard/static/pizza-bootstrap"]
+	path = timerboard/static/pizza-bootstrap
+	url = git@github.com:Sylnai/pizza-bootstrap.git

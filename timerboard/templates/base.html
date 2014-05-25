@@ -1,13 +1,18 @@
 <!doctype html>
 <html>
 	<head>
-		{% assets "js-vendor" %}
-			<script type="text/javascript" src="{{ ASSET_URL }}"></script>
-		{% endassets %}
+		<!-- assets --!>
+		{% assets "js-vendor" -%}
+			<script type="text/javascript" src='{{ ASSET_URL }}'></script>
+		{% endassets -%}
+		{% assets "css-vendor", "css-custom" -%}
+			<link rel="stylesheet" type="text/css" href="{{ ASSET_URL }}" />
+		{% endassets -%}
+		<!-- end assets --!>
+
 		{% block head %}
-			<link rel="shortcut icon" href="{{ url_for('static', filename='favicon.png') }}">
-			<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='bootstrap.min.css') }}" />
-			<title>{% block title %}{% endblock %}</title>
+		<link rel="shortcut icon" href="{{ url_for('static', filename='favicon.png') }}">
+		<title>{% block title %}{% endblock %}</title>
 		{% endblock %}
 	</head>
 	<body>

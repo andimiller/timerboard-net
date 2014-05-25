@@ -1,0 +1,5 @@
+css-custom:
+        filters: cssutils
+        output: custom.css
+        contents:
+                - pizza-bootstrap/dist/css/bootstrap.css
