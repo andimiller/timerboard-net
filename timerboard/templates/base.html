@@ -1,0 +1,26 @@
+<!doctype html>
+<html>
+	<head>
+		{% assets "js_all" %}
+			<script type="text/javascript" src="{{ ASSET_URL }}"></script>
+		{% endassets %}
+		{% block head %}
+			<link rel="shortcut icon" href="{{ url_for('static', filename='favicon.png') }}">
+			<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='bootstrap.min.css') }}" />
+			<title>{% block title %}{% endblock %}</title>
+		{% endblock %}
+	</head>
+	<body>
+		<div class="container">
+			<h1>{% block header %}{% endblock %}</h1>
+			{% block body %}
+			{% endblock %}
+		</div>
+		<hr />
+		<footer>
+		<div class="container">
+			<p class=".small text-center text-muted">For any enquiries or comments, please contact <a href="http://evewho.com/pilot/Lucia+Denniard">Lucia Denniard</a>. This site is a deployment of <a href="https://bitbucket.org/Sylnai/timerboard-net">timerboard-net</a>, which is available under the <a href="http://opensource.org/licenses/MIT">MIT License</a>.</p>
+		</div>
+		</footer>
+	</body>
+</html>
