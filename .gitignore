@@ -1,0 +1,3 @@
+*.pyc
+bower_components
+timerboard/static/.webassets-cache/
