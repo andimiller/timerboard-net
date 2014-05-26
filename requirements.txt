@@ -2,3 +2,5 @@ flask
 flask-login
 flask-assets
 cssutils
+flask-sqlalchemy
+pyyaml

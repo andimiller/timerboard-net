@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+DEFAULT_PORT=8890
+port=${1-$DEFAULT_PORT}
+uwsgi --http :"$port" --wsgi-file wsgi.py --callable app --py-autoreload 1
