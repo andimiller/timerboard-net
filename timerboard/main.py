@@ -13,7 +13,7 @@ def load_user(userid):
 
 def create_app():   # We could pass a config object here
     app = Flask(__name__)
-
+    app.debug = os.environ.get('TIMERBOARD_PRODUCTION', True)
     # Register template filters here
     # app.add_template_filter(some_method)
 
