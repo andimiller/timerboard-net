@@ -29,4 +29,8 @@ def create_app():   # We could pass a config object here
     with app.app_context():
         db.create_all()
 
+    from timerboard.users.views import mod as users_blueprint
+    from timerboard.assets import mod as assets_blueprint
+    app.register_blueprint(users_blueprint)
+    app.register_blueprint(assets_blueprint)
     return app
