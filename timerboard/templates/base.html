@@ -16,6 +16,40 @@
 		{% endblock %}
 	</head>
 	<body>
+		<nav class="navbar navbar-default">
+		<div class="container">
+			<div class="navbar-header">
+				<button class="navbar-toggle" data-target=".navbar-collapse" data-toggle="collapse" type="button" data-target=".navbar-ex1-collapse">
+					<span class="sr-only">
+						Toggle navigation
+					</span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</button>
+				<a class="navbar-brand" href="/"><i class="fa fa-calendar"></i> timerboard.net</a></div>
+			<nav class="collapse navbar-collapse navbar-ex1-collapse" role="navigtion">
+				{% if current_user.is_anonymous() %}
+				<form class="navbar-form navbar-right" name="signin" action="/login" method="POST" >
+					<a class="btn btn-default" href="/signup"><i class="icon-user"></i>
+						Register
+					</a>
+					<div class="form-group">
+						<input name="username" type="text" placeholder="Username" class="form-control">
+					</div>
+					<div class="form-group">
+						<input name="password" type="password" placeholder="Password" class="form-control">
+					</div>
+					<input type="hidden" name="next_page" value="{{ next_page }}">
+					<button type="submit" class="btn btn-success">Sign in</button>
+				</form>
+				{% else %}
+				{% endif %}
+			</nav>
+
+
+
+
 		<div class="container">
 			<h1>{% block header %}{% endblock %}</h1>
 			{% block body %}
